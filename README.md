@@ -15,14 +15,14 @@ npm install use-utm-parameters
 ## Usage
 
 ```js
-import useUTMParameters from "use-utm-parameters";
+import { useUTMParameters } from "use-utm-parameters";
 
 // Common usage
 const params = useUTMParameters(
   "?utm_source=xxxx&utm_campaign=2024_show&utm_term=what"
 );
 
-//=> { "utm_term": "what", "utm_source": "xxxx", "utm_campaign": "2024_show", "utm_content": null }
+//=> { "utm_term": "what", "utm_source": "xxxx", "utm_campaign": "2024_show" }
 
 const params = useUTMParameters(
   "?utm_source=xxxx&utm_campaign=2024_show&utm_term=what",
@@ -31,23 +31,19 @@ const params = useUTMParameters(
   }
 );
 
-//=> { "term": "what", "source": "xxxx", "campaign": "2024_show", "content": null }
+//=> { "term": "what", "source": "xxxx", "campaign": "2024_show" }
 
 const params = useUTMParameters("?utm_campaign=2024_show&utm_term=what", {
   format: "short",
-  compact: true, // Removes non-valid values
 });
 
 //=> { "term": "what", "campaign": "2024_show" }
 
 const params = useUTMParameters("");
-//=> { "utm_term": null, "utm_source": null, "utm_campaign": null, "utm_content": null }
-
-const params = useUTMParameters("", { compact: true });
 //=> {}
 
 const params = useUTMParameters();
-//=> { "utm_term": null, "utm_source": null, "utm_campaign": null, "utm_content": null }
+//=> {}
 ```
 
 > [!NOTE]
@@ -60,7 +56,6 @@ const params = useUTMParameters();
 - `value`: A URL-like string containing the utm parameters.
 - `options`: An objecting containing one or more of the following keys:
 
-| Option  | Type    | Description                                                                            |
-| ------- | ------- | -------------------------------------------------------------------------------------- |
-| format  | String  | `short` OR `default`. short will remove the `utm` prefix from keys. See examples above |
-| compact | Boolean | If true, it will remove non-valid values from the returned object.                     |
+| Option | Type   | Description                                                                            |
+| ------ | ------ | -------------------------------------------------------------------------------------- |
+| format | String | `short` OR `default`. short will remove the `utm` prefix from keys. See examples above |

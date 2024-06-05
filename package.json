@@ -1,0 +1,27 @@
+{
+  "name": "use-utm-parameters",
+  "version": "0.0.1",
+  "description": "A React Hook to deal with UTM Parameters for marketing campaigns",
+  "main": "index.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/djalmaaraujo/use-utm-parameters.git"
+  },
+  "keywords": [
+    "react",
+    "hook",
+    "typescript",
+    "utm",
+    "utm-parameters",
+    "utm-params"
+  ],
+  "author": "Djalma Araujo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/djalmaaraujo/use-utm-parameters/issues"
+  },
+  "homepage": "https://github.com/djalmaaraujo/use-utm-parameters#readme"
+}

@@ -2,9 +2,18 @@
   "name": "use-utm-parameters",
   "version": "0.0.1",
   "description": "A React Hook to deal with UTM Parameters for marketing campaigns",
-  "main": "index.ts",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "test": "test"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -23,5 +32,11 @@
   "bugs": {
     "url": "https://github.com/djalmaaraujo/use-utm-parameters/issues"
   },
-  "homepage": "https://github.com/djalmaaraujo/use-utm-parameters#readme"
+  "homepage": "https://github.com/djalmaaraujo/use-utm-parameters#readme",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1"
+  }
 }

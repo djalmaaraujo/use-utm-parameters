@@ -1,6 +1,6 @@
 # useUTMParameters() Hook
 
-> Get all valid [UTM params](https://en.wikipedia.org/wiki/UTM_parameters) from a string or URL.
+> Get all valid [UTM params](https://en.wikipedia.org/wiki/UTM_parameters) from a string.
 
 ## What is UTM Code?
 
